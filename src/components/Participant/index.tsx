@@ -1,9 +1,17 @@
 import {View, Text} from 'react-native';
+import { Button } from '../Button';
 
-export function Participant(){
+
+import {styles} from './styles';
+
+interface IProps {
+  name:string;
+}
+export function Participant({name}:IProps){
   return (
-    <View>
-      <Text>ParticipanteX</Text>
+    <View style={styles.container}>
+      <Text style={styles.nameUser}>{name}</Text>
+      <Button name="-" onPress={()=>{}}/>
     </View>
   )
 }
